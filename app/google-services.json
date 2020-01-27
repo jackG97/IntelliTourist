@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "560771806000",
+    "firebase_url": "https://intellitouristapp.firebaseio.com",
+    "project_id": "intellitouristapp",
+    "storage_bucket": "intellitouristapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:560771806000:android:cec7a58ec79a0e8d988ef5",
+        "android_client_info": {
+          "package_name": "com.example.intellitourist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "560771806000-l0trs45jfu1qth01uek6oq31p2c7pj5p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.intellitourist",
+            "certificate_hash": "74e5a0768fdcf9587f944a44e891850a3a598613"
+          }
+        },
+        {
+          "client_id": "560771806000-bg5olpeevk1iqkq7clqe377ocvmupuo1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCY3ZmVug1W7kr692ImfCfAWOkeJ6OLoOg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "560771806000-bg5olpeevk1iqkq7clqe377ocvmupuo1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

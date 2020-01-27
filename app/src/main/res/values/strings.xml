@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">IntelliTourist</string>
+    <string name="title_activity_map">Map</string>
+    <string name="title_activity_bars_map">Map</string>
+</resources>
