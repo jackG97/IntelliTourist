@@ -23,6 +23,9 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class RegisterActivity extends AppCompatActivity {
 
     //varibles
@@ -34,10 +37,11 @@ public class RegisterActivity extends AppCompatActivity {
     private Boolean ValidateName = false;
     private Boolean ValidateEmail1= false;
     private Boolean ValidatePassword1 = false;
+    public String tempEmail;
+    public String tempPass;
     String email1;
     String name1;
     String password1;
-    String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     MediaPlayer mp = null;
     FirebaseAuth mfirebaseAuth;
 
@@ -58,49 +62,67 @@ public class RegisterActivity extends AppCompatActivity {
         Register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String email1 = Email1.getText().toString();
-                String password1 = Password1.getText().toString();
-                String name1 = Name1.getText().toString();
-                if (name1.isEmpty()) {
-                    Name1.setError("Please Provide User-Name!");
-                    Name1.requestFocus();
-                }else if (email1.isEmpty()) {
-                    Email1.setError("Set Your Email!");
-                    Email1.requestFocus();
-                } else if (password1.isEmpty()) {
-                    Password1.setError("Set your password");
-                    Password1.requestFocus();
-                } else if (email1.isEmpty() && password1.isEmpty() && name1.isEmpty()) {
-                    Toast.makeText(RegisterActivity.this, "Fields Empty!", Toast.LENGTH_SHORT).show();
-                } else if (!(email1.isEmpty() && password1.isEmpty() && name1.isEmpty())) {
-                    mfirebaseAuth.createUserWithEmailAndPassword(email1, password1).addOnCompleteListener(RegisterActivity.this, new OnCompleteListener() {
-                        @Override
-                        public void onComplete(@NonNull Task task) {
-
-                            if (!task.isSuccessful()) {
-                                Toast.makeText(RegisterActivity.this.getApplicationContext(),
-                                        "SignUp unsuccessful: " + task.getException().getMessage(),
-                                        Toast.LENGTH_SHORT).show();
-                            } else {
-                                startActivity(new Intent(RegisterActivity.this, OptionsActivity.class));
-                            }
-                        }
-                    });
-                } else {
-                    Toast.makeText(RegisterActivity.this, "Error", Toast.LENGTH_SHORT).show();
-                }
+                validate(view);
             }
         });
-        if (mp!=null){//this plays a beep noise when the users clicks the register button
-            mp.reset();
-            mp.release();
-        }
-        mp = MediaPlayer.create(getApplicationContext(),R.raw.ring1);
-        mp.start();
-
     }
+            public void validate(View view) {
+                EditText checkPassword = (EditText) findViewById(R.id.PasswordTF);
+                //takes the input and stores it to the variable.
+                tempPass = checkPassword.getText().toString();
+                EditText checkEmail = (EditText) findViewById(R.id.EmailAddressTF);
+                //takes the input and stores it to the variable.
+                tempEmail = checkEmail.getText().toString();
 
-}
+                //loads in the pattern used to validate the email
+                Pattern patternEmail = Pattern.compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
+                //compares the email input to the validation pattern
+                Matcher matcherEmail = patternEmail.matcher(tempEmail);
+
+                //loads in the pattern used to validate the password
+                Pattern patternPassword = Pattern.compile("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\\S+$).{8,}$");
+                //compares the password input to the validation pattern
+                Matcher matcherPassword = patternPassword.matcher(tempPass);
+
+                // if the input matches returns a variable as true, else it returns it as false
+                if (matcherPassword.matches() == true) {
+                    ValidatePassword1 = true;
+                } else {
+                    ValidatePassword1 = false;
+                    checkPassword.setError(checkPassword.getHint() +" "+ getResources().getString(R.string.invalid));
+                }
+
+                // if the input matches returns a variable as true, else it returns it as false
+                if (matcherEmail.matches() == true) {
+                    ValidateEmail1 = true;
+                } else {
+                    ValidateEmail1 = false;
+                    checkEmail.setError(checkEmail.getHint() +" "+ getResources().getString(R.string.invalid));
+                }
+                //if both the email and password are valid then do this code
+                if (ValidatePassword1 == true && ValidateEmail1 == true) {
+//takes the temp password and temp email and stores them as password and email
+                    password1 = tempPass;
+                    email1 = tempEmail;
+                    //this code takes the email and the password and uses them to create the account
+                    mfirebaseAuth.createUserWithEmailAndPassword(email1, password1)
+                            .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                                //@Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    //if the account is created successfully then do this
+                                    if (task.isSuccessful()) {
+                                        Toast.makeText(getApplicationContext(), getResources().getString(R.string.toast_reg_success), Toast.LENGTH_SHORT).show();
+                                        startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+                                        //else do this
+                                    } else {
+                                        Toast.makeText(getApplicationContext(), getResources().getString(R.string.toast_reg_failed), Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                            });
+                }
+            }
+        }
+
 
 
 

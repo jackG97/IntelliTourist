@@ -2,4 +2,12 @@
     <string name="app_name">IntelliTourist</string>
     <string name="title_activity_map">Map</string>
     <string name="title_activity_bars_map">Map</string>
+    <string name="title_activity_museums_maps">Map</string>
+    <string name="title_activity_parks_maps">Map</string>
+    <string name="invalid">is invalid</string>
+    <string name="toast_reg_success">Registeration is complete</string>
+    <string name="toast_reg_failed">Registeration was unsuccessful</string>
+    <string name="title_activity_sites_maps">Map</string>
+
+
 </resources>

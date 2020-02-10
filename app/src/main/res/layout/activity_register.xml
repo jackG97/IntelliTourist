@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/image4"
+    android:background="@drawable/image3"
     tools:context=".LoginActivity">
 
     <ImageView
@@ -26,6 +26,7 @@
         android:ems="10"
         android:hint="Enter User Name"
         android:inputType="textPersonName"
+        android:textColorHint="@android:color/black"
         app:layout_constraintBottom_toTopOf="@+id/EmailAddressTF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.213"
@@ -40,6 +41,7 @@
         android:ems="10"
         android:hint="Enter Your Email Address"
         android:inputType="textEmailAddress"
+        android:textColorHint="@android:color/black"
         app:layout_constraintBottom_toTopOf="@+id/PassTF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.216"
@@ -53,6 +55,7 @@
         android:ems="10"
         android:hint="Enter Your Password"
         android:inputType="textPassword"
+        android:textColorHint="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.211"
