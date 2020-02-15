@@ -113,5 +113,8 @@ public class LoginActivity extends AppCompatActivity {
         super.onStart();
         mfirebaseAuth.addAuthStateListener(mAuthStateListener);
     }
+
+    public void onButtonClick(View view) {
+    }
 }
 

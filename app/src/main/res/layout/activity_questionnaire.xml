@@ -65,7 +65,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="536dp"
-        android:text="Q2: Do you Enjoy Bars?"
+        android:text="Q2: Do you Enjoy Nightlife?"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"

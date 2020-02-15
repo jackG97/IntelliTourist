@@ -48,7 +48,7 @@ public class QuestionnaireActivity extends AppCompatActivity {
                     Intent intent = new Intent(QuestionnaireActivity.this, RestuarantsMapActivity.class);
                     startActivity(intent);
                 } else if(Byes.isChecked()){
-                    Intent intent = new Intent(QuestionnaireActivity.this, BarsMapActivity.class);
+                    Intent intent = new Intent(QuestionnaireActivity.this, MapsActivity.class);
                     startActivity(intent);
                 } else if(Myes.isChecked()){
                     Intent intent = new Intent(QuestionnaireActivity.this, MuseumsMapsActivity.class);

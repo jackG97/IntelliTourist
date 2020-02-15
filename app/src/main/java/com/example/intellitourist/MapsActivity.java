@@ -1,19 +1,8 @@
 package com.example.intellitourist;
 
-import androidx.annotation.NonNull;
-import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
-import android.Manifest;
-import android.content.Context;
-import android.content.pm.PackageManager;
-import android.location.Address;
-import android.location.Geocoder;
-import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
-import android.os.Bundle;
-import android.widget.SearchView;
 
+import android.os.Bundle;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -22,67 +11,19 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.karumi.dexter.Dexter;
-import com.karumi.dexter.PermissionToken;
-import com.karumi.dexter.listener.PermissionDeniedResponse;
-import com.karumi.dexter.listener.PermissionGrantedResponse;
-import com.karumi.dexter.listener.PermissionRequest;
-import com.karumi.dexter.listener.single.PermissionListener;
 
-import java.io.IOException;
-import java.util.List;
-
-public class BarsMapActivity extends FragmentActivity implements OnMapReadyCallback {
-
+public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
-    SupportMapFragment mapFragment;
-    SearchView searchView;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_map);
-        searchView = findViewById(R.id.sv_location);
-        mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.google_map);
-
-
-        searchView.setOnQueryTextListener((new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                String location = searchView.getQuery().toString();
-                List<Address> addresslist  = null;
-
-
-                if (location != null || !location.equals("")){
-                    Geocoder geocoder = new Geocoder(BarsMapActivity.this);
-                    try{
-                        addresslist = geocoder.getFromLocationName(location, 1);
-                    } catch (IOException e){
-                        e.printStackTrace();
-                    }
-                    Address address = addresslist.get(0);
-                    LatLng latLng = new LatLng(address.getLatitude(),address.getLongitude());
-                    mMap.addMarker(new MarkerOptions().position(latLng).title(location));
-                    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 10));
-
-                }
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String s) {
-                return false;
-            }
-        }));
-
-        mapFragment.getMapAsync(this);
-
+        setContentView(R.layout.activity_maps);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        // SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-        //      .findFragmentById(R.id.map);
-        // mapFragment.getMapAsync(this);
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
     }
 
 
@@ -98,8 +39,6 @@ public class BarsMapActivity extends FragmentActivity implements OnMapReadyCallb
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
-
 
         // Add a marker in Sydney and move the camera
         LatLng dublin = new LatLng(53.335494, -6.263579);
@@ -136,9 +75,6 @@ public class BarsMapActivity extends FragmentActivity implements OnMapReadyCallb
         mMap.addMarker(new MarkerOptions().position(dublin6).title("O'Reilly's").snippet("Bar/Nightclub")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(dublin6));
-
-
-
 
     }
 }

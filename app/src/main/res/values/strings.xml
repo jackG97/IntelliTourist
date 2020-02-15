@@ -8,6 +8,7 @@
     <string name="toast_reg_success">Registeration is complete</string>
     <string name="toast_reg_failed">Registeration was unsuccessful</string>
     <string name="title_activity_sites_maps">Map</string>
+    <string name="title_activity_maps">Map</string>
 
 
 </resources>
