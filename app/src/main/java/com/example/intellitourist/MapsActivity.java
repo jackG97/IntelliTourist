@@ -3,6 +3,8 @@ package com.example.intellitourist;
 import androidx.fragment.app.FragmentActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -10,11 +12,24 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
+
+
     private GoogleMap mMap;
+    private Marker barsMarkers;
+    private Marker barsMarkers1;
+    private Marker barsMarkers2;
+    private Marker nightclubsMarkers;
+    private Marker nightclubsMarkers1;
+    private Marker nightclubsMarkers2;
+    private Marker nightclubsMarkers3;
+    private Button Nbutton;
+    private Button Bbutton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +39,40 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        Nbutton = (Button) findViewById(R.id.nightclubsbtn);
+        Bbutton = (Button) findViewById(R.id.barsbtn);
+
+        Nbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                nightclubs(view);
+            }
+        });
+
+
+        Bbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                bars(view);
+            }
+        });
     }
+
+    public void nightclubs(View view){
+        nightclubsMarkers.setVisible(false);
+        nightclubsMarkers1.setVisible(false);
+        nightclubsMarkers2.setVisible(false);
+        nightclubsMarkers3.setVisible(false);
+
+    }
+
+    public void bars(View view){
+        barsMarkers.setVisible(false);
+        barsMarkers1.setVisible(false);
+        barsMarkers2.setVisible(false);
+    }
+
 
 
     /**
@@ -40,41 +88,24 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
+
+
+
+
+
+
         // Add a marker in Sydney and move the camera
-        LatLng dublin = new LatLng(53.335494, -6.263579);
-        mMap.addMarker(new MarkerOptions().position(dublin).title("Copper Face Jacks").snippet("Bar/Nightclub")
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(dublin));
+        nightclubsMarkers = mMap.addMarker(new MarkerOptions().position(new LatLng(53.335494, -6.263579)).title("Copper Face Jacks").snippet("Nightclub").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
+        nightclubsMarkers1 = mMap.addMarker(new MarkerOptions().position(new LatLng(53.335942, -6.263552)).title("Dicey's Garden Club").snippet("Nightclub").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
+        nightclubsMarkers2 = mMap.addMarker(new MarkerOptions().position(new LatLng(53.348158, -6.261998)).title("The Academy").snippet("Nightclub").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
+        nightclubsMarkers3 = mMap.addMarker(new MarkerOptions().position(new LatLng(53.347076, -6.254171)).title("O'Reilly's").snippet("Nightclub").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
 
-        LatLng dublin1 = new LatLng(53.335942, -6.263552);
-        mMap.addMarker(new MarkerOptions().position(dublin1).title("Dicey's Garden Club").snippet("Bar/Nightclub")
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(dublin1));
 
-        LatLng dublin2 = new LatLng(53.336163, -6.265102);
-        mMap.addMarker(new MarkerOptions().position(dublin2).title("Flannery's Bar").snippet("Bar/Nightclub")
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(dublin2));
 
-        LatLng dublin3 = new LatLng(53.345139, -6.265858);
-        mMap.addMarker(new MarkerOptions().position(dublin3).title("Bab Bobs").snippet("Bar/Nightclub")
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(dublin3));
+        barsMarkers = mMap.addMarker(new MarkerOptions().position(new LatLng(53.336163, -6.265102)).title("Flannery's Bar").snippet("Bar").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_VIOLET)));
+        barsMarkers1 = mMap.addMarker(new MarkerOptions().position(new LatLng(53.345139, -6.265858)).title("Bab Bobs").snippet("Bar").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_VIOLET)));
+        barsMarkers2 = mMap.addMarker(new MarkerOptions().position(new LatLng(53.348158, -6.261998)).title("River Bar").snippet("Bar").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_VIOLET)));
 
-        LatLng dublin4 = new LatLng(53.348158, -6.261998);
-        mMap.addMarker(new MarkerOptions().position(dublin4).title("The Academy").snippet("Bar/Nightclub")
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(dublin4));
-
-        LatLng dublin5 = new LatLng(53.348158, -6.261998);
-        mMap.addMarker(new MarkerOptions().position(dublin5).title("River Bar").snippet("Bar/Nightclub")
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(dublin5));
-
-        LatLng dublin6 = new LatLng(53.347076, -6.254171);
-        mMap.addMarker(new MarkerOptions().position(dublin6).title("O'Reilly's").snippet("Bar/Nightclub")
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(dublin6));
 
     }
 }
