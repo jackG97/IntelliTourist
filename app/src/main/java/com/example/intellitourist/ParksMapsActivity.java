@@ -28,37 +28,9 @@ public class ParksMapsActivity extends FragmentActivity implements OnMapReadyCal
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
 
-        searchView = findViewById(R.id.sv_location);
-        mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.google_map);
 
-        searchView.setOnQueryTextListener((new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                String location = searchView.getQuery().toString();
-                List<Address> addresslist  = null;
-
-
-                if (location != null || !location.equals("")){
-                    Geocoder geocoder = new Geocoder(ParksMapsActivity.this);
-                    try{
-                        addresslist = geocoder.getFromLocationName(location, 1);
-                    } catch (IOException e){
-                        e.printStackTrace();
-                    }
-                    Address address = addresslist.get(0);
-                    LatLng latLng = new LatLng(address.getLatitude(),address.getLongitude());
-                    mMap.addMarker(new MarkerOptions().position(latLng).title(location));
-                    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 10));
-
-                }
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String s) {
-                return false;
-            }
-        }));
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map);
 
         mapFragment.getMapAsync(this);
 

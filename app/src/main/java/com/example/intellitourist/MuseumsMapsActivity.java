@@ -29,39 +29,13 @@ public class MuseumsMapsActivity extends FragmentActivity implements OnMapReadyC
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
 
-        searchView = findViewById(R.id.sv_location);
-        mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.google_map);
 
-        searchView.setOnQueryTextListener((new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                String location = searchView.getQuery().toString();
-                List<Address> addresslist  = null;
-
-
-                if (location != null || !location.equals("")){
-                    Geocoder geocoder = new Geocoder(MuseumsMapsActivity.this);
-                    try{
-                        addresslist = geocoder.getFromLocationName(location, 1);
-                    } catch (IOException e){
-                        e.printStackTrace();
-                    }
-                    Address address = addresslist.get(0);
-                    LatLng latLng = new LatLng(address.getLatitude(),address.getLongitude());
-                    mMap.addMarker(new MarkerOptions().position(latLng).title(location));
-                    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 10));
-
-                }
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String s) {
-                return false;
-            }
-        }));
-
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+
+
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         // SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()

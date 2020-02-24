@@ -43,9 +43,6 @@
         <activity
             android:name=".MuseumsMapsActivity"
             android:label="@string/title_activity_museums_maps" />
-        <activity
-            android:name=".BarsMapActivity"
-            android:label="@string/title_activity_bars_map" />
         <activity android:name=".ChatActivity" />
         <activity
             android:name=".RestuarantsMapActivity"
