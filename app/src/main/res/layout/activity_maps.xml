@@ -9,29 +9,46 @@
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="666dp"
+        android:layout_height="530dp"
         tools:context=".MapsActivity" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="123dp"
-        android:orientation="horizontal">
+        android:layout_height="150dp"
+        android:orientation="vertical">
 
         <Button
             android:id="@+id/nightclubsbtn"
-            android:layout_width="216dp"
-            android:layout_height="wrap_content"
+            android:layout_width="424dp"
+            android:layout_height="38dp"
             android:background="@drawable/button_background"
             android:onClick="onButtonClick"
-            android:text="Nightclubs" />
+            android:text="Not Show Nightclubs" />
+
+        <Button
+            android:id="@+id/nightclubsbtn1"
+            android:layout_width="421dp"
+            android:layout_height="36dp"
+            android:background="@drawable/button_background"
+            android:onClick="onButtonClick"
+            android:text="Show Nightclubs" />
 
         <Button
             android:id="@+id/barsbtn"
-            android:layout_width="197dp"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
             android:background="@drawable/button_background"
             android:onClick="onButtonClick"
-            android:text="Bars" />
+            android:text="Not show Bars" />
+
+        <Button
+            android:id="@+id/barsbtn1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/button_background"
+            android:onClick="onButtonClick"
+            android:text="Show Bars" />
+
 
     </LinearLayout>
 

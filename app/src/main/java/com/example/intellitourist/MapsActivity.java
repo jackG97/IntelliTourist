@@ -18,7 +18,6 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
 
-
     private GoogleMap mMap;
     private Marker barsMarkers;
     private Marker barsMarkers1;
@@ -29,7 +28,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private Marker nightclubsMarkers3;
     private Button Nbutton;
     private Button Bbutton;
-
+    private Button Nbutton1;
+    private Button Bbutton1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +42,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         Nbutton = (Button) findViewById(R.id.nightclubsbtn);
         Bbutton = (Button) findViewById(R.id.barsbtn);
+        Nbutton1 = (Button) findViewById(R.id.nightclubsbtn1);
+        Bbutton1 = (Button) findViewById(R.id.barsbtn1);
 
         Nbutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +52,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
         });
 
+        Nbutton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                nightclubs1(view);
+            }
+        });
+
+
 
         Bbutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,21 +67,43 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 bars(view);
             }
         });
+
+        Bbutton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                bars1(view);
+            }
+        });
     }
 
-    public void nightclubs(View view){
+    public void nightclubs(View view) {
         nightclubsMarkers.setVisible(false);
         nightclubsMarkers1.setVisible(false);
         nightclubsMarkers2.setVisible(false);
         nightclubsMarkers3.setVisible(false);
-
     }
 
-    public void bars(View view){
-        barsMarkers.setVisible(false);
-        barsMarkers1.setVisible(false);
-        barsMarkers2.setVisible(false);
+    public void nightclubs1(View view) {
+        nightclubsMarkers.setVisible(true);
+        nightclubsMarkers1.setVisible(true);
+        nightclubsMarkers2.setVisible(true);
+        nightclubsMarkers3.setVisible(true);
     }
+
+    public void bars(View view) {
+            barsMarkers.setVisible(false);
+            barsMarkers1.setVisible(false);
+            barsMarkers2.setVisible(false);
+    }
+
+    public void bars1(View view) {
+        barsMarkers.setVisible(true);
+        barsMarkers1.setVisible(true);
+        barsMarkers2.setVisible(true);
+    }
+
+
+
 
 
 
