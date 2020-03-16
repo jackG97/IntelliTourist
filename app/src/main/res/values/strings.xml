@@ -9,6 +9,10 @@
     <string name="toast_reg_failed">Registeration was unsuccessful</string>
     <string name="title_activity_sites_maps">Map</string>
     <string name="title_activity_maps">Map</string>
+    <string name="click_here">Click Here</string>
+    <string name="please_fill_answer_this_questionnaire_to_find_what_you_want">Please Fill out this Questionnaire to find what you want</string>
+    <string name="title_activity_movies_maps">Map</string>
+    <string name="title_activity_tourist_points_maps">Map</string>
 
 
 </resources>

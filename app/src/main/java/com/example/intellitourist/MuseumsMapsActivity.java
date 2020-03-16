@@ -1,3 +1,4 @@
+
 package com.example.intellitourist;
 
 import androidx.fragment.app.FragmentActivity;
@@ -21,17 +22,19 @@ import java.util.List;
 public class MuseumsMapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
-    SupportMapFragment mapFragment;
-    SearchView searchView;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_map);
+        setContentView(R.layout.activity_museums_maps);
 
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
+
         mapFragment.getMapAsync(this);
 
 
@@ -58,35 +61,15 @@ public class MuseumsMapsActivity extends FragmentActivity implements OnMapReadyC
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng dublin = new LatLng(53.346765, -6.258777);
-        mMap.addMarker(new MarkerOptions().position(dublin).title("National Wax Museum").snippet("Museum")
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(dublin));
 
-        LatLng dublin1 = new LatLng(53.344305, -6.259527);
-        mMap.addMarker(new MarkerOptions().position(dublin1).title("Irish Whiskey Museum").snippet("Museum")
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(dublin1));
+        mMap.addMarker(new MarkerOptions().position(new LatLng(53.346765, -6.258777)).title("National Wax Museum").snippet("Museum").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
+        mMap.addMarker(new MarkerOptions().position(new LatLng(53.344305, -6.259527)).title("Irish Whiskey Museum").snippet("Museum").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
+        mMap.addMarker(new MarkerOptions().position(new LatLng(53.347692, -6.266342)).title("National Leprechaun Museum of Ireland").snippet("Museum").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
+        mMap.addMarker(new MarkerOptions().position(new LatLng(53.354538, -6.264036)).title("Dublin Writers Museum").snippet("Museum").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
+        mMap.addMarker(new MarkerOptions().position(new LatLng(53.348928, -6.247862)).title("EPIC The Irish Emigration Museum").snippet("Museum").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
+        mMap.addMarker(new MarkerOptions().position(new LatLng(53.343252, -6.251810)).title("Trinity College Zoological Museum").snippet("Museum").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
 
-        LatLng dublin2 = new LatLng(53.347692, -6.266342);
-        mMap.addMarker(new MarkerOptions().position(dublin2).title("National Leprechaun Museum of Ireland").snippet("Museum")
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(dublin2));
 
-        LatLng dublin3 = new LatLng(53.354538, -6.264036);
-        mMap.addMarker(new MarkerOptions().position(dublin3).title("Dublin Writers Museum").snippet("Museum")
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(dublin3));
-
-        LatLng dublin4 = new LatLng( 53.348928, -6.247862);
-        mMap.addMarker(new MarkerOptions().position(dublin4).title("EPIC The Irish Emigration Museum").snippet("Museum")
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(dublin4));
-
-        LatLng dublin5 = new LatLng( 53.343252, -6.251810);
-        mMap.addMarker(new MarkerOptions().position(dublin5).title("Trinity College Zoological Museum").snippet("Museum")
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(dublin5));
 
     }
 }

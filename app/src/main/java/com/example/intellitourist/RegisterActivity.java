@@ -31,6 +31,7 @@ public class RegisterActivity extends AppCompatActivity {
     //varibles
 
     private Button Register;
+    private Button Signin;
     private EditText Email1;
     private EditText Name1;
     private EditText Password1;
@@ -52,6 +53,7 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         //find id method for variables and items
+        Signin = (Button) findViewById(R.id.button);
         Register = (Button) findViewById(R.id.regBtn);
         Name1 = (EditText) findViewById(R.id.UserNameTF);
         Email1 = (EditText) findViewById(R.id.EmailAddressTF);
@@ -59,6 +61,14 @@ public class RegisterActivity extends AppCompatActivity {
         mfirebaseAuth = FirebaseAuth.getInstance();
 
         //on click function which is triggered by the press of the register button
+        Signin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
         Register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

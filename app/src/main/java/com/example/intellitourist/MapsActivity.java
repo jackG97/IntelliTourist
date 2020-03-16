@@ -28,6 +28,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private Marker nightclubsMarkers3;
     private Button Nbutton;
     private Button Bbutton;
+    private Button Abutton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +41,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         Nbutton = (Button) findViewById(R.id.nightclubsbtn);
         Bbutton = (Button) findViewById(R.id.barsbtn);
+        Abutton = (Button) findViewById(R.id.allbtn);
 
 
         Nbutton.setOnClickListener(new View.OnClickListener() {
@@ -58,6 +60,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
         });
 
+
+        Abutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                all(view);
+            }
+        });
 
     }
 
@@ -83,6 +92,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             nightclubsMarkers1.setVisible(false);
             nightclubsMarkers2.setVisible(false);
             nightclubsMarkers3.setVisible(false);
+
+    }
+
+    public void all(View view){
+        barsMarkers.setVisible(true);
+        barsMarkers1.setVisible(true);
+        barsMarkers2.setVisible(true);
+        nightclubsMarkers.setVisible(true);
+        nightclubsMarkers1.setVisible(true);
+        nightclubsMarkers2.setVisible(true);
+        nightclubsMarkers3.setVisible(true);
 
     }
 

@@ -40,7 +40,7 @@ public class OptionsActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 FirebaseAuth.getInstance().signOut();
-                Intent I = new Intent(OptionsActivity.this, HomeActivity.class);
+                Intent I = new Intent(OptionsActivity.this, LoginActivity.class);
                 startActivity(I);
 
             }
@@ -67,7 +67,7 @@ public class OptionsActivity extends AppCompatActivity {
         }
 
         public void OpenQuestion() {
-            Intent intent = new Intent(this, QuestionnaireActivity.class);
+            Intent intent = new Intent(this, GuidedActivity.class);
             startActivity(intent);
         }
 

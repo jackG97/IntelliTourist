@@ -26,6 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     //varibles
 
     private Button Login;
+    private Button RegisterHere;
     private EditText Email;
     private EditText Name;
     private EditText Password;
@@ -49,6 +50,7 @@ public class LoginActivity extends AppCompatActivity {
         mfirebaseAuth = FirebaseAuth.getInstance();
 
         //find id method for variables and items
+        RegisterHere = (Button) findViewById(R.id.button2);
         Login = (Button) findViewById(R.id.Login);
         Name = (EditText) findViewById(R.id.NameTF);
         Email = (EditText) findViewById(R.id.EmailTF);
@@ -66,6 +68,14 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         };
+
+        RegisterHere.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
 
         Login.setOnClickListener(new View.OnClickListener() {
             @Override

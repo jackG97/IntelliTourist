@@ -20,13 +20,12 @@ import java.util.List;
 public class ParksMapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
-    SupportMapFragment mapFragment;
-    SearchView searchView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_map);
+        setContentView(R.layout.activity_parks_maps);
 
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()

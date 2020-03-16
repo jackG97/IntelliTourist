@@ -9,8 +9,8 @@
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="587dp"
-        tools:context=".MapsActivity" />
+        android:layout_height="588dp"
+        tools:context="FastFoodRestuarantsActivity" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,29 +18,37 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/nightclubsbtn"
+            android:id="@+id/italian"
             android:layout_width="424dp"
-            android:layout_height="42dp"
+            android:layout_height="32dp"
             android:background="@drawable/button_background"
             android:onClick="onButtonClick"
-            android:text="Nightclubs" />
+            android:text="Italian" />
 
 
         <Button
-            android:id="@+id/barsbtn"
+            android:id="@+id/FastFood"
             android:layout_width="match_parent"
-            android:layout_height="43dp"
+            android:layout_height="31dp"
             android:background="@drawable/button_background"
             android:onClick="onButtonClick"
-            android:text="Bars" />
+            android:text="Fast Food" />
 
         <Button
-            android:id="@+id/allbtn"
+            android:id="@+id/Cafe"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:background="@drawable/button_background"
             android:onClick="onButtonClick"
-            android:text="All" />
+            android:text="Cafe" />
+
+        <Button
+            android:id="@+id/chinese"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/button_background"
+            android:onClick="onButtonClick"
+            android:text="Chinese" />
 
 
     </LinearLayout>

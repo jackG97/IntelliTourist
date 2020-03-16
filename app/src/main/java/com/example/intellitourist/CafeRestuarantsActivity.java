@@ -21,7 +21,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import java.io.IOException;
 import java.util.List;
 
-public class RestuarantsMapActivity extends FragmentActivity implements OnMapReadyCallback {
+public class CafeRestuarantsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
     private Marker italian;
@@ -50,7 +50,7 @@ public class RestuarantsMapActivity extends FragmentActivity implements OnMapRea
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_map);
+        setContentView(R.layout.activity_cafe_restuarants);
 
 
 
@@ -207,10 +207,10 @@ public class RestuarantsMapActivity extends FragmentActivity implements OnMapRea
         cafe3 = mMap.addMarker(new MarkerOptions().position(new LatLng(53.344490, -6.267424)).title("Cafe Topolis").snippet("Cafe").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
 
 
-        chinese.setVisible(true);
-        chinese1.setVisible(true);
-        chinese2.setVisible(true);
-        chinese3.setVisible(true);
+        chinese.setVisible(false);
+        chinese1.setVisible(false);
+        chinese2.setVisible(false);
+        chinese3.setVisible(false);
         italian.setVisible(false);
         italian1.setVisible(false);
         italian2.setVisible(false);
@@ -219,10 +219,10 @@ public class RestuarantsMapActivity extends FragmentActivity implements OnMapRea
         fastfood2.setVisible(false);
         fastfood3.setVisible(false);
         fastfood4.setVisible(false);
-        cafe.setVisible(false);
-        cafe1.setVisible(false);
-        cafe2.setVisible(false);
-        cafe3.setVisible(false);
+        cafe.setVisible(true);
+        cafe1.setVisible(true);
+        cafe2.setVisible(true);
+        cafe3.setVisible(true);
 
 
 
