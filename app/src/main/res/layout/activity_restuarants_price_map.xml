@@ -10,45 +10,37 @@
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="588dp"
-        tools:context="FastFoodRestuarantsActivity" />
+        tools:context=".RestuarantsPriceMapActivity" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="123dp"
+        android:layout_height="148dp"
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/italian"
+            android:id="@+id/ten"
             android:layout_width="424dp"
-            android:layout_height="32dp"
+            android:layout_height="43dp"
             android:background="@drawable/button_background"
             android:onClick="onButtonClick"
-            android:text="Italian" />
+            android:text="€10 or less"/>
 
 
         <Button
-            android:id="@+id/FastFood"
+            android:id="@+id/twenty"
             android:layout_width="match_parent"
-            android:layout_height="31dp"
+            android:layout_height="38dp"
             android:background="@drawable/button_background"
             android:onClick="onButtonClick"
-            android:text="Fast Food" />
+            android:text="€20 or more"/>
 
         <Button
-            android:id="@+id/Cafe"
+            android:id="@+id/fivety"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="39dp"
             android:background="@drawable/button_background"
             android:onClick="onButtonClick"
-            android:text="Cafe" />
-
-        <Button
-            android:id="@+id/chinese"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:background="@drawable/button_background"
-            android:onClick="onButtonClick"
-            android:text="Chinese" />
+            android:text="€50 or more" />
 
 
     </LinearLayout>

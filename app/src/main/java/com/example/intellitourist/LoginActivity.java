@@ -99,7 +99,7 @@ public class LoginActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task task) {
                             if (!task.isSuccessful()) {
-                                Toast.makeText(LoginActivity.this, "Not sucessfull", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(LoginActivity.this, "Not successful", Toast.LENGTH_SHORT).show();
                             } else {
                                 startActivity(new Intent(LoginActivity.this, OptionsActivity.class));
                             }

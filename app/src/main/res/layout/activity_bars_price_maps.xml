@@ -9,8 +9,8 @@
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="587dp"
-        tools:context=".MapsActivity" />
+        android:layout_height="566dp"
+        tools:context=".BarsPriceMapsActivity" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,29 +18,37 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/nightclubsbtn"
-            android:layout_width="424dp"
-            android:layout_height="42dp"
+            android:id="@+id/two"
+            android:layout_width="match_parent"
+            android:layout_height="31dp"
             android:background="@drawable/button_background"
             android:onClick="onButtonClick"
-            android:text="Nightclubs" />
+            android:text="€2" />
 
 
         <Button
-            android:id="@+id/barsbtn"
+            android:id="@+id/five"
             android:layout_width="match_parent"
-            android:layout_height="43dp"
+            android:layout_height="31dp"
             android:background="@drawable/button_background"
             android:onClick="onButtonClick"
-            android:text="Bars" />
+            android:text="€5" />
 
         <Button
-            android:id="@+id/allbtn"
+            android:id="@+id/six"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="31dp"
             android:background="@drawable/button_background"
             android:onClick="onButtonClick"
-            android:text="All" />
+            android:text="€6" />
+
+        <Button
+            android:id="@+id/seven"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:background="@drawable/button_background"
+            android:onClick="onButtonClick"
+            android:text="€7" />
 
 
     </LinearLayout>

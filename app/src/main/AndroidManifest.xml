@@ -17,10 +17,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FastFoodRestuarantsActivity"></activity>
-        <activity android:name=".IndianRestuarantsActivity" />
-        <activity android:name=".CafeRestuarantsActivity" />
-        <activity android:name=".RestuarantsTypeActivity" />
+        <activity android:name=".BarsViewsActivity"></activity>
+        <activity android:name=".MuseumTypeActivity" />
+        <activity android:name=".AgeActivity" />
+        <activity android:name=".RestuarantsPopularityActivity" />
+        <activity android:name=".RestuarantsPriceMapActivity" />
+        <activity android:name=".RestaurantsViewsActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -47,7 +49,7 @@
             android:name=".MoviesMapsActivity"
             android:label="@string/title_activity_movies_maps" />
         <activity
-            android:name=".MapsActivity"
+            android:name=".BarsPriceMapsActivity"
             android:label="@string/title_activity_maps" />
         <activity
             android:name=".SitesMapsActivity"
@@ -60,7 +62,6 @@
         <activity android:name=".OptionsActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".HomeActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

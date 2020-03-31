@@ -207,24 +207,6 @@ public class RestuarantsMapActivity extends FragmentActivity implements OnMapRea
         cafe3 = mMap.addMarker(new MarkerOptions().position(new LatLng(53.344490, -6.267424)).title("Cafe Topolis").snippet("Cafe").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
 
 
-        chinese.setVisible(true);
-        chinese1.setVisible(true);
-        chinese2.setVisible(true);
-        chinese3.setVisible(true);
-        italian.setVisible(false);
-        italian1.setVisible(false);
-        italian2.setVisible(false);
-        fastfood.setVisible(false);
-        fastfood1.setVisible(false);
-        fastfood2.setVisible(false);
-        fastfood3.setVisible(false);
-        fastfood4.setVisible(false);
-        cafe.setVisible(false);
-        cafe1.setVisible(false);
-        cafe2.setVisible(false);
-        cafe3.setVisible(false);
-
-
 
     }
 

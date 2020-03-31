@@ -4,10 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RadioButton;
 
 public class QuestionnaireActivity extends AppCompatActivity {
 
@@ -33,14 +31,10 @@ public class QuestionnaireActivity extends AppCompatActivity {
         Culture = (Button) findViewById(R.id.button7);
         Movies = (Button) findViewById(R.id.button8);
 
-
-
-
-
         Eat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(QuestionnaireActivity.this, RestuarantsTypeActivity.class);
+                Intent intent = new Intent(QuestionnaireActivity.this, RestaurantsViewsActivity.class);
                 startActivity(intent);
             }
         });
@@ -48,7 +42,7 @@ public class QuestionnaireActivity extends AppCompatActivity {
         Nightlife.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(QuestionnaireActivity.this, MapsActivity.class);
+                Intent intent = new Intent(QuestionnaireActivity.this, AgeActivity.class);
                 startActivity(intent);
             }
         });
