@@ -21,31 +21,22 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.584" />
 
-    <ImageView
-        android:id="@+id/BotView"
-        android:layout_width="420dp"
-        android:layout_height="117dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView33"
-        app:srcCompat="@drawable/bot"
-        tools:layout_editor_absoluteX="-5dp" />
-
     <Button
         android:id="@+id/button12"
         android:layout_width="111dp"
         android:layout_height="56dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginBottom="68dp"
         android:text="Submit"
         app:layout_constraintBottom_toTopOf="@+id/AnswerTV"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.216"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BotView"
-        app:layout_constraintVertical_bias="0.396" />
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/RequestTF"
         android:layout_width="346dp"
         android:layout_height="56dp"
+        android:layout_marginBottom="40dp"
         android:background="@android:color/white"
         android:ems="10"
         android:gravity="start|top"
@@ -53,8 +44,8 @@
         android:inputType="textMultiLine"
         app:layout_constraintBottom_toTopOf="@+id/button12"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BotView" />
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button13"
@@ -65,21 +56,32 @@
         android:text="New Request"
         app:layout_constraintBottom_toTopOf="@+id/AnswerTV"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintHorizontal_bias="0.356"
         app:layout_constraintStart_toEndOf="@+id/button12"
         app:layout_constraintTop_toBottomOf="@+id/RequestTF"
-        app:layout_constraintVertical_bias="0.222" />
+        app:layout_constraintVertical_bias="0.17" />
 
     <TextView
         android:id="@+id/AnswerTV"
-        android:layout_width="311dp"
-        android:layout_height="233dp"
-        android:layout_marginBottom="64dp"
+        android:layout_width="360dp"
+        android:layout_height="297dp"
+        android:layout_marginBottom="44dp"
         android:background="@color/common_google_signin_btn_text_dark_default"
         android:textColor="@android:color/black"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.524"
+        app:layout_constraintHorizontal_bias="0.611"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/BotView"
+        android:layout_width="411dp"
+        android:layout_height="144dp"
+        app:layout_constraintBottom_toTopOf="@+id/RequestTF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView33"
+        app:srcCompat="@drawable/bot" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
