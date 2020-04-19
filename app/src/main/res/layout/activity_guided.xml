@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/image3"
+    android:background="@drawable/dublin_skyline_image_4"
     tools:context=".GuidedActivity">
 
     <TextView
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:text="🅸🅽🆃🅴🅻🅻🅸🆃🅾🆄🆁🅸🆂🆃"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/holo_orange_light"
         android:textSize="26dp"
         app:layout_constraintBottom_toTopOf="@+id/Login"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,16 +30,17 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.619"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView17"
-        app:layout_constraintVertical_bias="0.282" />
+        app:layout_constraintVertical_bias="0.101" />
 
     <Button
         android:id="@+id/travelBtn"
-        android:layout_width="126dp"
-        android:layout_height="70dp"
+        android:layout_width="123dp"
+        android:layout_height="58dp"
         android:layout_marginTop="40dp"
+        android:background="@drawable/button_background"
         android:text="Independent Travel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/Guidebtn"
@@ -50,10 +51,11 @@
 
     <Button
         android:id="@+id/Guidebtn"
-        android:layout_width="118dp"
-        android:layout_height="71dp"
+        android:layout_width="109dp"
+        android:layout_height="55dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="64dp"
+        android:background="@drawable/button_background"
         android:text="Guidence"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

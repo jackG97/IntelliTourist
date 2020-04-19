@@ -13,6 +13,9 @@
     <string name="please_fill_answer_this_questionnaire_to_find_what_you_want">Please Fill out this Questionnaire to find what you want</string>
     <string name="title_activity_movies_maps">Map</string>
     <string name="title_activity_tourist_points_maps">Map</string>
+    <string name="title_activity_museums_price_maps_actvivty">Map</string>
+    <string name="title_activity_muesums_price">Map</string>
+    <string name="title_activity_museums_price_maps">Map</string>
 
 
 </resources>

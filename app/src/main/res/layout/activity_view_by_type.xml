@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/image3"
+    android:background="@drawable/dublin_skyline_image_4"
     tools:context=".RestaurantsViewsActivity">
 
     <TextView
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="🅸🅽🆃🅴🅻🅻🅸🆃🅾🆄🆁🅸🆂🆃"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/holo_orange_light"
         android:textSize="26dp"
         app:layout_constraintBottom_toTopOf="@+id/Login"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,47 +25,50 @@
         android:id="@+id/textView20"
         android:layout_width="351dp"
         android:layout_height="62dp"
-        android:layout_marginTop="52dp"
-        android:text="Based on your favourite attraction would you like to..........."
+        android:layout_marginTop="24dp"
+        android:text="Dublins has a wide variety of fantastic eating establishments. Take a look."
         android:textColor="@android:color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.606"
+        app:layout_constraintHorizontal_bias="0.616"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
     <Button
         android:id="@+id/button9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="108dp"
+        android:layout_height="52dp"
+        android:background="@drawable/button_background"
         android:text="Click Me"
         app:layout_constraintBottom_toTopOf="@+id/button10"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.122"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView20"
-        app:layout_constraintVertical_bias="0.474" />
+        app:layout_constraintVertical_bias="0.438" />
 
     <Button
         android:id="@+id/button10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="80dp"
+        android:layout_width="108dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="64dp"
+        android:background="@drawable/button_background"
         android:text="Click Me"
         app:layout_constraintBottom_toTopOf="@+id/button11"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.122"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="120dp"
+        android:layout_width="106dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="248dp"
+        android:background="@drawable/button_background"
         android:text="Click Me"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.121"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -77,8 +80,10 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/button9"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.088"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+        app:layout_constraintTop_toBottomOf="@+id/textView20"
+        app:layout_constraintVertical_bias="0.309" />
 
     <TextView
         android:id="@+id/textView22"
@@ -89,9 +94,10 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/button10"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.088"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button9"
-        app:layout_constraintVertical_bias="0.523" />
+        app:layout_constraintVertical_bias="0.382" />
 
     <TextView
         android:id="@+id/textView23"
@@ -102,7 +108,9 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/button11"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.032"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button10" />
+        app:layout_constraintTop_toBottomOf="@+id/button10"
+        app:layout_constraintVertical_bias="0.428" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

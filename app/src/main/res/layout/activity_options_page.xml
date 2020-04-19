@@ -4,20 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/image3"
+    android:background="@drawable/dublin_skyline_image_4"
     tools:context=".HomeActivity">
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="196dp"
+        android:layout_marginTop="136dp"
         android:text="🅸🅽🆃🅴🅻🅻🅸🆃🅾🆄🆁🅸🆂🆃"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/holo_orange_light"
         android:textSize="26dp"
         app:layout_constraintBottom_toTopOf="@+id/Login"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.584" />
@@ -47,7 +46,7 @@
         app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.7" />
 
     <Button
         android:id="@+id/SignoutBtn"

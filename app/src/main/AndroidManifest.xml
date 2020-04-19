@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.intellitourist">
+
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -17,12 +18,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BarsViewsActivity"></activity>
-        <activity android:name=".MuseumTypeActivity" />
-        <activity android:name=".AgeActivity" />
-        <activity android:name=".RestuarantsPopularityActivity" />
-        <activity android:name=".RestuarantsPriceMapActivity" />
-        <activity android:name=".RestaurantsViewsActivity" />
+
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -36,7 +32,23 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".MuseumsMapsActivity"
+            android:name=".MuseumsPriceMapsActivity"
+            android:label="@string/title_activity_museums_price_maps"></activity>
+        <activity
+            android:name=".MuesumsPriceMapsActivity"
+            android:label="@string/title_activity_muesums_price" />
+        <activity
+            android:name=".MuseumsPriceMapsActvivty"
+            android:label="@string/title_activity_museums_price_maps_actvivty" />
+        <activity android:name=".MuseumsViewActivity" />
+        <activity android:name=".BarsTypeMapsActivity" />
+        <activity android:name=".BarsViewsActivity" />
+        <activity android:name=".AgeActivity" />
+        <activity android:name=".RestuarantsPopularityActivity" />
+        <activity android:name=".RestuarantsPriceMapActivity" />
+        <activity android:name=".RestaurantsViewsActivity" />
+        <activity
+            android:name=".MuseumsTypeMapsActivity"
             android:label="@string/title_activity_museums_maps" />
         <activity
             android:name=".ParksMapsActivity"

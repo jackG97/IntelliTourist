@@ -32,6 +32,14 @@ public class BarsViewsActivity extends AppCompatActivity {
             }
         });
 
+        barshours.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(BarsViewsActivity.this, BarsTypeMapsActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 }

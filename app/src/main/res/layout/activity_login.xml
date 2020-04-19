@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/image3"
+    android:background="@drawable/background_723053_1920"
     tools:context=".LoginActivity">
 
     <TextView
@@ -25,7 +25,7 @@
         android:layout_width="129dp"
         android:layout_height="54dp"
         android:layout_marginStart="148dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginBottom="148dp"
         android:background="@drawable/button_background"
         android:text="Login"
         app:layout_constraintBottom_toBottomOf="parent"

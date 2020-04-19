@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/image3"
+    android:background="@drawable/dublin_skyline_image_4"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="212dp"
+        android:layout_marginTop="100dp"
         android:text="🅸🅽🆃🅴🅻🅻🅸🆃🅾🆄🆁🅸🆂🆃"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/holo_orange_light"
         android:textSize="26dp"
         app:layout_constraintBottom_toTopOf="@+id/Login"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,14 +25,13 @@
         android:id="@+id/logoIT"
         android:layout_width="133dp"
         android:layout_height="211dp"
-        android:layout_marginBottom="292dp"
+        android:layout_marginBottom="384dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.543"
+        app:layout_constraintHorizontal_bias="0.55"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/image21" />
-        app:
-
+        app:srcCompat="@drawable/marker_image1" />
+    app:
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

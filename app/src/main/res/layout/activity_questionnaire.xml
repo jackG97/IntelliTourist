@@ -5,7 +5,7 @@
     android:id="@+id/Eyes"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/image3"
+    android:background="@drawable/dublin_skyline_image_4"
     tools:context=".QuestionnaireActivity">
 
     <TextView
@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="🅸🅽🆃🅴🅻🅻🅸🆃🅾🆄🆁🅸🆂🆃"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/holo_orange_light"
         android:textSize="26dp"
         app:layout_constraintBottom_toTopOf="@+id/Login"
         app:layout_constraintEnd_toEndOf="parent"

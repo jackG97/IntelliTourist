@@ -50,7 +50,7 @@ public class QuestionnaireActivity extends AppCompatActivity {
         Muesums.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(QuestionnaireActivity.this, MuseumsMapsActivity.class);
+                Intent intent = new Intent(QuestionnaireActivity.this, MuseumsViewActivity.class);
                 startActivity(intent);
             }
         });

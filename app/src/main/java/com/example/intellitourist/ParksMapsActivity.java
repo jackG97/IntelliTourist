@@ -69,6 +69,31 @@ public class ParksMapsActivity extends FragmentActivity implements OnMapReadyCal
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(dublin2));
 
+        LatLng dublin3 = new LatLng(53.273209, -6.269357);
+        mMap.addMarker(new MarkerOptions().position(dublin3).title("Marlay Park").snippet("Park")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(dublin3));
+
+        LatLng dublin4 = new LatLng(53.343383, -6.254574);
+        mMap.addMarker(new MarkerOptions().position(dublin4).title("College Park").snippet("Park")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(dublin4));
+
+        LatLng dublin5 = new LatLng(53.356718, -6.257507);
+        mMap.addMarker(new MarkerOptions().position(dublin5).title("Mountjoy Square Park").snippet("Park")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(dublin5));
+
+        LatLng dublin6 = new LatLng(53.353981, -6.264118);
+        mMap.addMarker(new MarkerOptions().position(dublin6).title("Garden of Remembrance").snippet("Park")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(dublin6));
+
+        LatLng dublin7 = new LatLng(53.339873, -6.249192);
+        mMap.addMarker(new MarkerOptions().position(dublin7).title("Merrion Square").snippet("Park")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(dublin7));
+
 
 
     }
