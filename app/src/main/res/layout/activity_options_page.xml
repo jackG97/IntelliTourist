@@ -27,7 +27,7 @@
         android:layout_height="51dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/button_background"
-        android:text="Chat"
+        android:text="Chatbot"
         app:layout_constraintBottom_toTopOf="@+id/QuestionnaireBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

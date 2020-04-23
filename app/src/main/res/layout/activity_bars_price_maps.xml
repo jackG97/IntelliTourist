@@ -23,7 +23,7 @@
             android:layout_height="31dp"
             android:background="@drawable/button_background"
             android:onClick="onButtonClick"
-            android:text="€2" />
+            android:text="€2 drinks" />
 
 
         <Button
@@ -32,7 +32,7 @@
             android:layout_height="31dp"
             android:background="@drawable/button_background"
             android:onClick="onButtonClick"
-            android:text="€5" />
+            android:text="€5 drinks" />
 
         <Button
             android:id="@+id/six"
@@ -40,7 +40,7 @@
             android:layout_height="31dp"
             android:background="@drawable/button_background"
             android:onClick="onButtonClick"
-            android:text="€6" />
+            android:text="€6 drinks" />
 
         <Button
             android:id="@+id/seven"
@@ -48,7 +48,7 @@
             android:layout_height="28dp"
             android:background="@drawable/button_background"
             android:onClick="onButtonClick"
-            android:text="€7" />
+            android:text="€7 drinks" />
 
 
     </LinearLayout>

@@ -23,7 +23,7 @@
             android:layout_height="44dp"
             android:background="@drawable/button_background"
             android:onClick="onButtonClick"
-            android:text="€10" />
+            android:text="€10 Entry fee" />
 
 
         <Button
@@ -32,7 +32,7 @@
             android:layout_height="41dp"
             android:background="@drawable/button_background"
             android:onClick="onButtonClick"
-            android:text="€20" />
+            android:text="€20 Entry fee" />
 
         <Button
             android:id="@+id/ThirtyBtn"
@@ -40,7 +40,7 @@
             android:layout_height="41dp"
             android:background="@drawable/button_background"
             android:onClick="onButtonClick"
-            android:text="€30" />
+            android:text="€30 Entry fee" />
 
 
     </LinearLayout>

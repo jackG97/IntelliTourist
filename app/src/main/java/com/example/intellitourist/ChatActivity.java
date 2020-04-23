@@ -25,6 +25,7 @@ public class ChatActivity extends AppCompatActivity {
     private Button ClearBtn;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,15 +46,25 @@ public class ChatActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
-                //introduction
-                if (Request.getText().toString().equalsIgnoreCase("festivals") || Request.getText().toString().equalsIgnoreCase("pubs")
+                if (Request.getText().toString().equalsIgnoreCase("hi"))
+                {
+                    Answer.setText("Hi, nice to meet you, I'm here to provide you with extra information you may need to know about Dublin's Attractions.\n\n "+
+                                    "Your next step is to enter in a topic you want to talk about.\n\n" +
+                                    "Please enter in the 'Ask me here' box any of the following topics you wish to talk about.\n\n" +
+                                    "Festivals, Museums, Parks, Movies, Pubs, Nightclubs, Restaurants, Tourist offices");
+
+                }
+
+                //topic choice
+                else if (Request.getText().toString().equalsIgnoreCase("festivals") || Request.getText().toString().equalsIgnoreCase("pubs")
                 || Request.getText().toString().equalsIgnoreCase("museums") || Request.getText().toString().equalsIgnoreCase("nightclubs")
                 || Request.getText().toString().equalsIgnoreCase("parks") || Request.getText().toString().equalsIgnoreCase("restaurants")
                 || Request.getText().toString().equalsIgnoreCase("movies") || Request.getText().toString().equalsIgnoreCase("tourist offices"))
                 {
                     Answer.setText("Ok so you want to ask me about "+Request.getText().toString()+". What is it you want to know about?\n\n" +
                             "To ask me please follow this format. Enter in the topic again, followed by a dash symbol, then followed by what it is you want to talk about.\n\n" +
-                    "Here is an Example ( pubs-general ). This means you want to know general information about pubs.\n");
+                            "Here is an Example ( pubs-general ). This means you want to know general information about pubs.\n\n" +
+                            "You can ask about general information, opening hours, prices and recommendations");
                 }
 
                // Festival information
