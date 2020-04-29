@@ -1,27 +1,19 @@
 package com.example.intellitourist;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.util.Log;
-import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.example.intellitourist.OptionsActivity;
-import com.example.intellitourist.R;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -71,7 +63,10 @@ public class RegisterActivity extends AppCompatActivity {
                 String email1 = Email1.getText().toString();
                 String password1 = Password1.getText().toString();
                 String name1 = Name1.getText().toString();
-                if (name1.isEmpty()) {
+                if (email1.isEmpty() && password1.isEmpty() && name1.isEmpty()) {
+                    Toast.makeText(RegisterActivity.this, "Fields Empty!", Toast.LENGTH_SHORT).show();
+                }
+                else if (name1.isEmpty()) {
                     Name1.setError("Please Provide User-Name!");
                     Name1.requestFocus();
                 }else if (email1.isEmpty()) {
@@ -80,9 +75,7 @@ public class RegisterActivity extends AppCompatActivity {
                 } else if (password1.isEmpty()) {
                     Password1.setError("Set your password");
                     Password1.requestFocus();
-                } else if (email1.isEmpty() && password1.isEmpty() && name1.isEmpty()) {
-                    Toast.makeText(RegisterActivity.this, "Fields Empty!", Toast.LENGTH_SHORT).show();
-                } else if (!(email1.isEmpty() && password1.isEmpty() && name1.isEmpty())) {
+                }  else if (!(email1.isEmpty() && password1.isEmpty() && name1.isEmpty())) {
                     mfirebaseAuth.createUserWithEmailAndPassword(email1, password1).addOnCompleteListener(RegisterActivity.this, new OnCompleteListener() {
                         @Override
                         public void onComplete(@NonNull Task task) {

@@ -1,11 +1,11 @@
 
 package com.example.intellitourist;
 
-import androidx.fragment.app.FragmentActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.fragment.app.FragmentActivity;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -142,15 +142,15 @@ public class MuseumsTypeMapsActivity extends FragmentActivity implements OnMapRe
         history2 = mMap.addMarker(new MarkerOptions().position(new LatLng(53.354538, -6.264036)).title("Dublin Writers Museum").snippet("History Museum").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
         history3 = mMap.addMarker(new MarkerOptions().position(new LatLng(53.348928, -6.247862)).title("EPIC The Irish Emigration Museum").snippet(" History Museum").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
 
-        art = mMap.addMarker(new MarkerOptions().position(new LatLng(53.347708, -6.245392)).title("“Outside In” Art Gallery and Exhibition Space").snippet("Art Museum").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
-        art1 = mMap.addMarker(new MarkerOptions().position(new LatLng(53.354236, -6.264636)).title("The Hugh Lane").snippet("Art Museum").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
-        art2 = mMap.addMarker(new MarkerOptions().position(new LatLng(53.341003, -6.252492)).title("National Gallery").snippet("Art Museum").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
-        art3 = mMap.addMarker(new MarkerOptions().position(new LatLng(53.345384, -6.265439)).title("National Photographic Archive").snippet("Art Museum").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
+        art = mMap.addMarker(new MarkerOptions().position(new LatLng(53.347708, -6.245392)).title("“Outside In” Art Gallery and Exhibition Space").snippet("Art Museum").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ROSE)));
+        art1 = mMap.addMarker(new MarkerOptions().position(new LatLng(53.354236, -6.264636)).title("The Hugh Lane").snippet("Art Museum").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ROSE)));
+        art2 = mMap.addMarker(new MarkerOptions().position(new LatLng(53.341003, -6.252492)).title("National Gallery").snippet("Art Museum").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ROSE)));
+        art3 = mMap.addMarker(new MarkerOptions().position(new LatLng(53.345384, -6.265439)).title("National Photographic Archive").snippet("Art Museum").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ROSE)));
 
-        science = mMap.addMarker(new MarkerOptions().position(new LatLng(53.334142, -6.258806)).title("National Children's Science Centre").snippet("Science Museum").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
-        science1 = mMap.addMarker(new MarkerOptions().position(new LatLng(53.344203, -6.250275)).title("Science Gallery Dublin").snippet("Science Museum").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
-        science2 = mMap.addMarker(new MarkerOptions().position(new LatLng(53.343327, -6.252118)).title("Ecological Museum At Trinity College").snippet("Science Museum").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
-        science3 = mMap.addMarker(new MarkerOptions().position(new LatLng(53.344871, -6.264195)).title("Science Gallery International").snippet("Science Museum").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
+        science = mMap.addMarker(new MarkerOptions().position(new LatLng(53.334142, -6.258806)).title("National Children's Science Centre").snippet("Science Museum").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN)));
+        science1 = mMap.addMarker(new MarkerOptions().position(new LatLng(53.344203, -6.250275)).title("Science Gallery Dublin").snippet("Science Museum").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN)));
+        science2 = mMap.addMarker(new MarkerOptions().position(new LatLng(53.343327, -6.252118)).title("Ecological Museum At Trinity College").snippet("Science Museum").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN)));
+        science3 = mMap.addMarker(new MarkerOptions().position(new LatLng(53.344871, -6.264195)).title("Science Gallery International").snippet("Science Museum").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN)));
 
 
 

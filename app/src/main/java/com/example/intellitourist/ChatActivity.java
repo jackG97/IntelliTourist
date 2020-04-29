@@ -1,7 +1,5 @@
 package com.example.intellitourist;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class ChatActivity extends AppCompatActivity {
 
@@ -81,7 +81,6 @@ public class ChatActivity extends AppCompatActivity {
                             "Is there anything else you would like to ask?");
                 }
                 // pub information
-
                 else if (Request.getText().toString().equalsIgnoreCase("pubs-prices"))
                 {
                     Answer.setText("The average price of alcoholic drinks in pubs is 5.50 euro. Sometimes it depends on the pubs, in terms of location and quality of services\n" +
@@ -113,7 +112,7 @@ public class ChatActivity extends AppCompatActivity {
                 //nightclub information
                 else if (Request.getText().toString().equalsIgnoreCase("nightclubs-opening hours"))
                 {
-                    Answer.setText("Dont worry night clubs stay open very late in Dublin.\n"+
+                    Answer.setText("Don't worry night clubs stay open very late in Dublin.\n"+
                             "Most clubs open at 11pm and close at 3am, our longest opened nightclub is copper face jacks which is 5am.\n" +
                             "Is there anything else you would like to ask?");
                 }
@@ -122,6 +121,13 @@ public class ChatActivity extends AppCompatActivity {
                 {
                     Answer.setText("Dublin has several nightclubs in the city. They are full of a lot of energy.\n" +
                             "We have clubs such as the Academy, Club M, Diceys and many more. Get great deals on drinks and listen to some of the best DJ's in Dublin.\n" +
+                            "Is there anything else you would like to ask?");
+                }
+
+                else if (Request.getText().toString().equalsIgnoreCase("nightclubs-recommend"))
+                {
+                    Answer.setText("Best rated nightclubs in Dublin are Diceys, The Academy, The Camden and Copper Face Jacks.\n\n " +
+                            "They have tremendous music and are always packed out with customers.\n\n"+
                             "Is there anything else you would like to ask?");
                 }
 
@@ -202,7 +208,8 @@ public class ChatActivity extends AppCompatActivity {
                             "•\tCineWorld\n"+
                             "•\tOmniplex\n"+
                             "•\tMovies @ Dundrum\n\n"+
-                            "And many more. They show the best and newest movies around.");
+                            "And many more. They show the best and newest movies around." +
+                            "Is there anything else you would like to ask?");
                 }
 
                 else if (Request.getText().toString().equalsIgnoreCase("movies-prices"))
@@ -218,18 +225,21 @@ public class ChatActivity extends AppCompatActivity {
 
                 else if (Request.getText().toString().equalsIgnoreCase("movies-opening hours"))
                 {
-                    Answer.setText("All cinemas operate from 9am to 12am. The last film showings start at 10pm.");
+                    Answer.setText("All cinemas operate from 9am to 12am. The last film showings start at 10pm." +
+                            "Is there anything else you would like to ask?");
                 }
 
                 else if (Request.getText().toString().equalsIgnoreCase("tourist offices-general"))
                 {
                     Answer.setText("If you want to find out more about tourism and attractions you can visit the tourist guide offices here in Dublin's city centre.\n" +
-                            "They will provide you with more information");
+                            "They will provide you with more information" +
+                            "Is there anything else you would like to ask?");
                 }
 
                 else if (Request.getText().toString().equalsIgnoreCase("tourist offices-opening hours"))
                 {
-                    Answer.setText("The offices are open from 9am to 7pm everyday of the week.");
+                    Answer.setText("The offices are open from 9am to 7pm everyday of the week." +
+                            "Is there anything else you would like to ask?");
                 }
 
 

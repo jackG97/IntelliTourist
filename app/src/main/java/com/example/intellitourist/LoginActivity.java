@@ -1,38 +1,34 @@
 package com.example.intellitourist;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
-
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.util.Log;
-import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class LoginActivity extends AppCompatActivity {
 
 
-    //varibles
+    //variables
 
     private Button Login;
     private Button RegisterHere;
     private EditText Email;
     private EditText Name;
     private EditText Password;
-    private Boolean ValidateEmail = false;
-    private Boolean ValidatePassword = false;
-    private Boolean ValidateName1 = false;
+    Boolean ValidateEmail = false;
+    Boolean ValidatePassword = false;
+    Boolean ValidateName1 = false;
     String name;
     String email;
     String password;
@@ -83,7 +79,10 @@ public class LoginActivity extends AppCompatActivity {
                 String email = Email.getText().toString();
                 String password = Password.getText().toString();
                 String name = Name.getText().toString();
-                if (name.isEmpty()) {
+                if (email.isEmpty() && password.isEmpty() && name.isEmpty()) {
+                    Toast.makeText(LoginActivity.this, "Fields Empty!", Toast.LENGTH_SHORT).show();
+                }
+                else if (name.isEmpty()) {
                     Name.setError("Please Provide User-Name!");
                     Name.requestFocus();
                 }else if (email.isEmpty()) {
@@ -92,9 +91,7 @@ public class LoginActivity extends AppCompatActivity {
                 } else if (password.isEmpty()) {
                     Password.setError("Enter Password!");
                     Password.requestFocus();
-                } else if (email.isEmpty() && password.isEmpty() && name.isEmpty()) {
-                    Toast.makeText(LoginActivity.this, "Fields Empty!", Toast.LENGTH_SHORT).show();
-                } else if (!(email.isEmpty() && password.isEmpty() && name.isEmpty())) {
+                }  else if (!(email.isEmpty() && password.isEmpty() && name.isEmpty())) {
                     mfirebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(LoginActivity.this, new OnCompleteListener() {
                         @Override
                         public void onComplete(@NonNull Task task) {
