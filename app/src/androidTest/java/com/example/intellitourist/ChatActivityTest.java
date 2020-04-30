@@ -2,6 +2,7 @@ package com.example.intellitourist;
 
 import android.view.View;
 
+import androidx.test.espresso.Espresso;
 import androidx.test.rule.ActivityTestRule;
 
 import org.junit.After;
@@ -9,10 +10,7 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 
-import static androidx.test.espresso.Espresso.onView;
-import static androidx.test.espresso.action.ViewActions.clearText;
 import static androidx.test.espresso.action.ViewActions.click;
-import static androidx.test.espresso.action.ViewActions.scrollTo;
 import static androidx.test.espresso.action.ViewActions.typeText;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static org.junit.Assert.assertNotNull;
@@ -33,6 +31,7 @@ public class ChatActivityTest {
     }
 
 
+    //Integration test
     @Test
     public void testLaunch(){
         View view = mchatactivity.findViewById(R.id.textView33);
@@ -51,22 +50,24 @@ public class ChatActivityTest {
 
     }
 
+    // UI/system test
     @Test
     public void clearTextTest(){
-        onView(withId(R.id.RequestTF)).perform(typeText("Festivals"));
-        onView(withId(R.id.button13)).perform(clearText());
+        Espresso.onView(withId(R.id.RequestTF)).perform(typeText("Festivals"));
+        Espresso.closeSoftKeyboard();
+        Espresso.onView(withId(R.id.button12)).perform(click());
+        Espresso.onView(withId(R.id.button13)).perform(click());
     }
 
 
+    // UI/system test
     @Test
     public void sendMessageAndGetResponseBack(){
-        onView(withId(R.id.RequestTF)).perform(typeText("Festivals"));
-        onView(withId(R.id.button12)).perform(scrollTo()).perform(click());
-        onView(withId(R.id.AnswerTV)).perform(typeText("Dublin has great festivals to visit"));
+        Espresso.onView(withId(R.id.RequestTF)).perform(typeText("Festivals-general"));
+        Espresso.closeSoftKeyboard();
+        Espresso.onView(withId(R.id.button12)).perform(click());
 
     }
-
-
 
 
     @After

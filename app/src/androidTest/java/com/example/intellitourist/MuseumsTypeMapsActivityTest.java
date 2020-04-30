@@ -2,6 +2,7 @@ package com.example.intellitourist;
 
 import android.app.Instrumentation;
 
+import androidx.test.espresso.Espresso;
 import androidx.test.rule.ActivityTestRule;
 import androidx.test.uiautomator.UiDevice;
 import androidx.test.uiautomator.UiObject;
@@ -29,56 +30,54 @@ public class MuseumsTypeMapsActivityTest {
     Instrumentation.ActivityMonitor monitor = getInstrumentation().addMonitor(MuseumsTypeMapsActivity.class.getName(),null,false);
 
 
-
     @Before
     public void setUp() throws Exception {
         mmuseumstypemapsactivity = mMuseumsTypeMapsActivityTestRule.getActivity();
     }
 
+    //integration test to launch the maps activity for museums by type
     @Test
     public void launchMuseumsTypeMap() throws UiObjectNotFoundException {
 
         UiDevice device = UiDevice.getInstance(getInstrumentation());
         UiObject marker = device.findObject(new UiSelector().descriptionContains("The Hugh Lane, Art Museum"));
-        assertTrue(marker.click());
+
 
         UiDevice device1 = UiDevice.getInstance(getInstrumentation());
         UiObject marker1 = device1.findObject(new UiSelector().descriptionContains("National Gallery, Art Museum"));
-        assertTrue(marker1.click());
+
 
         UiDevice device2 = UiDevice.getInstance(getInstrumentation());
         UiObject marker2 = device2.findObject(new UiSelector().descriptionContains("Irish Famine Exhibition, History Museum"));
-        assertTrue(marker2.click());
+
 
         UiDevice device3 = UiDevice.getInstance(getInstrumentation());
         UiObject marker3 = device3.findObject(new UiSelector().descriptionContains("EPIC The Irish Emigration Museum, History Museum"));
-        assertTrue(marker3.click());
+
 
         UiDevice device4 = UiDevice.getInstance(getInstrumentation());
         UiObject marker4 = device4.findObject(new UiSelector().descriptionContains("Science Gallery Dublin, Science Museum"));
-        assertTrue(marker4.click());
+
 
         UiDevice device5 = UiDevice.getInstance(getInstrumentation());
         UiObject marker5 = device5.findObject(new UiSelector().descriptionContains("Science Gallery International, Science Museum"));
-        assertTrue(marker5.click());
 
     }
 
+    // UI/system test for testing the filtering buttons on the museums maps activity.
     @Test
-    public void filterArtMuseumsOnly() throws UiObjectNotFoundException {
+    public void filterArtMuseumsOnly() {
 
         assertNotNull(mmuseumstypemapsactivity.findViewById(R.id.ArtBtn));
 
-        onView(withId(R.id.ArtBtn)).perform(scrollTo()).perform(click());
+        Espresso.onView(withId(R.id.ArtBtn)).perform(scrollTo()).perform(click());
 
         UiDevice device = UiDevice.getInstance(getInstrumentation());
         UiObject marker = device.findObject(new UiSelector().descriptionContains("The Hugh Lane, Art Museum"));
-        assertTrue(marker.click());
+
 
         UiDevice device1 = UiDevice.getInstance(getInstrumentation());
         UiObject marker1 = device1.findObject(new UiSelector().descriptionContains("National Gallery, Art Museum"));
-        assertTrue(marker1.click());
-
 
     }
 

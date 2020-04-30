@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Instrumentation;
 import android.view.View;
 
+import androidx.test.espresso.Espresso;
 import androidx.test.rule.ActivityTestRule;
 
 import org.junit.After;
@@ -30,6 +31,8 @@ public class LoginActivityTest {
 
     Instrumentation.ActivityMonitor monitor = getInstrumentation().addMonitor(OptionsActivity.class.getName(),null,false);
 
+    Instrumentation.ActivityMonitor monitor1 = getInstrumentation().addMonitor(OptionsActivity.class.getName(),null,false);
+
 
     @Before
     public void setUp() throws Exception {
@@ -37,6 +40,7 @@ public class LoginActivityTest {
         mloginactivity = mLoginActivityTestRule.getActivity();
     }
 
+    // Integration test for launching the login activity.
     @Test
     public void testLaunch(){
 
@@ -57,23 +61,8 @@ public class LoginActivityTest {
         assertNotNull(view6);
     }
 
-    @Test
-    public void checkLoginCredentials(){
-        onView(withId(R.id.NameTF)).perform(typeText("jack567"));
-        onView(withId(R.id.EmailTF)).perform(typeText("jack38@gmail.com"));
-        onView(withId(R.id.PasswordTF)).perform(typeText("jack1997"));
-        assertNotNull(mloginactivity.findViewById(R.id.Login));
 
-        onView(withId(R.id.Login)).perform(scrollTo()).perform(click());
-
-        Activity optionsActivity =  getInstrumentation().waitForMonitorWithTimeout(monitor,5000);
-
-        assertNotNull(optionsActivity);
-
-        optionsActivity.finish();
-
-    }
-
+    // Integration test for checking for blanks
     @Test
     public void errorMessageForBlanks() {
         assertNotNull(mloginactivity.findViewById(R.id.Login));
@@ -83,6 +72,23 @@ public class LoginActivityTest {
         Activity optionsActivity =  getInstrumentation().waitForMonitorWithTimeout(monitor,5000);
 
         assertNull(optionsActivity);
+
+    }
+
+    // UI/system test for logging in
+    @Test
+    public void testLogin(){
+        Espresso.onView(withId(R.id.NameTF)).perform(typeText("jack678"));
+        Espresso.onView(withId(R.id.EmailTF)).perform(typeText("jack38@gmail.com"));
+        Espresso.onView(withId(R.id.PasswordTF)).perform(typeText("jack1997"));
+        Espresso.closeSoftKeyboard();
+        Espresso.onView(withId(R.id.Login)).perform(scrollTo()).perform(click());
+
+        Activity optionsActivity =  getInstrumentation().waitForMonitorWithTimeout(monitor1,5000);
+
+        assertNotNull(optionsActivity);
+
+        optionsActivity.finish();
 
     }
 

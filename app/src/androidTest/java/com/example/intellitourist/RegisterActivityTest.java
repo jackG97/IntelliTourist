@@ -3,6 +3,7 @@ package com.example.intellitourist;
 import android.app.Activity;
 import android.app.Instrumentation;
 
+import androidx.test.espresso.Espresso;
 import androidx.test.rule.ActivityTestRule;
 
 import org.junit.After;
@@ -12,7 +13,6 @@ import org.junit.Test;
 
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
-import static androidx.test.espresso.action.ViewActions.closeSoftKeyboard;
 import static androidx.test.espresso.action.ViewActions.scrollTo;
 import static androidx.test.espresso.action.ViewActions.typeText;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
@@ -39,13 +39,13 @@ public class RegisterActivityTest {
     }
 
 
+    // UI/system test for registering.
     @Test
     public void registerAccountOnButtonClick(){
-        onView(withId(R.id.UserNameTF)).perform(closeSoftKeyboard()).perform(typeText("Jack678"));
-        onView(withId(R.id.EmailAddressTF)).perform(closeSoftKeyboard()).perform(typeText("Jackgallaher78907@gmail.com"));
-        onView(withId(R.id.PassTF)).perform(closeSoftKeyboard()).perform(typeText("access123"));
-
-        assertNotNull(mregisteractivity.findViewById(R.id.regBtn));
+        Espresso.onView(withId(R.id.UserNameTF)).perform(typeText("Jack678"));
+        Espresso.onView(withId(R.id.EmailAddressTF)).perform(typeText("Jackgallaher78907@gmail.com"));
+        Espresso.onView(withId(R.id.PassTF)).perform(typeText("access123"));
+        Espresso.closeSoftKeyboard();
 
         onView(withId(R.id.regBtn)).perform(scrollTo()).perform(click());
 
@@ -57,6 +57,7 @@ public class RegisterActivityTest {
 
     }
 
+    // Integration test for testing the launch of login activity from register activity
     @Test
     public void testLaunchOfLoginActivityOnButtonClick(){
         assertNotNull(mregisteractivity.findViewById(R.id.button));
@@ -71,7 +72,6 @@ public class RegisterActivityTest {
 
 
     }
-
 
 
     @After

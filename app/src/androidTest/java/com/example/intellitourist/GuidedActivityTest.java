@@ -34,6 +34,7 @@ public class GuidedActivityTest {
         mguidedactivity = mGuidedActivityTestRule.getActivity();
     }
 
+    //Integration test, testing the launch of the questionnaire activity from the guided activity
     @Test
     public void testLaunchOfQuestionnaireActivityOnButtonClick() {
         assertNotNull(mguidedactivity.findViewById(R.id.travelBtn));
@@ -48,6 +49,7 @@ public class GuidedActivityTest {
 
     }
 
+    //Integration test, testing the launch of the tourist points maps activity from the guided activity
     @Test
     public void testLaunchOfTouristPointsMapsActivityOnButtonClick() {
         assertNotNull(mguidedactivity.findViewById(R.id.Guidebtn));

@@ -31,7 +31,7 @@ public class AgeActivityTest {
         mageactivity = mAgeActivityTestRule.getActivity();
     }
 
-
+    //Integration test, testing the launch of the questionnaire activity from the age activity if user is not over 18 Button
     @Test
     public void testLaunchOfQuestionnaireActivityOnButtonClick() {
         assertNotNull(mageactivity.findViewById(R.id.button14));;
@@ -46,6 +46,7 @@ public class AgeActivityTest {
 
     }
 
+    //Integration test, testing the launch of the bars type activity from the age activity if user is over 18 Button
     @Test
     public void testLaunchOfBarsViewActivityOnButtonClick() {
         assertNotNull(mageactivity.findViewById(R.id.over18Btn));
