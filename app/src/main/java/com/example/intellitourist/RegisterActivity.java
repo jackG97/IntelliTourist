@@ -76,6 +76,7 @@ public class RegisterActivity extends AppCompatActivity {
                     Password1.setError("Set your password");
                     Password1.requestFocus();
                 }  else if (!(email1.isEmpty() && password1.isEmpty() && name1.isEmpty())) {
+                    // firebase method used to create account for user using email and password
                     mfirebaseAuth.createUserWithEmailAndPassword(email1, password1).addOnCompleteListener(RegisterActivity.this, new OnCompleteListener() {
                         @Override
                         public void onComplete(@NonNull Task task) {

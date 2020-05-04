@@ -1,19 +1,13 @@
 package com.example.intellitourist;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.firebase.ui.auth.AuthUI;
-import com.google.android.gms.auth.api.Auth;
-import com.google.firebase.auth.FirebaseAuth;
+import androidx.appcompat.app.AppCompatActivity;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-import java.util.List;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class OptionsActivity extends AppCompatActivity {
 
@@ -61,11 +55,13 @@ public class OptionsActivity extends AppCompatActivity {
     }
 
 
+    // directs user to chat bot page
         public void OpenChat() {
             Intent intent = new Intent(this, ChatActivity.class);
             startActivity(intent);
         }
 
+        // directs user to questionnaire
         public void OpenQuestion() {
             Intent intent = new Intent(this, GuidedActivity.class);
             startActivity(intent);

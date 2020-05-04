@@ -1,11 +1,11 @@
 package com.example.intellitourist;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MuseumsViewActivity extends AppCompatActivity {
 
@@ -38,11 +38,13 @@ public class MuseumsViewActivity extends AppCompatActivity {
     }
 
 
+    //directs user to the museums type maps
     public void type (){
         Intent intent = new Intent(MuseumsViewActivity.this, MuseumsTypeMapsActivity.class);
         startActivity(intent);
     }
 
+    //directs user to the museums price maps
     public void price (){
         Intent intent = new Intent(MuseumsViewActivity.this, MuseumsPriceMapsActivity.class);
         startActivity(intent);

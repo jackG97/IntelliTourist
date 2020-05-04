@@ -1,11 +1,11 @@
 package com.example.intellitourist;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class GuidedActivity extends AppCompatActivity {
 
@@ -21,6 +21,7 @@ public class GuidedActivity extends AppCompatActivity {
         travel = (Button) findViewById(R.id.travelBtn);
         guide = (Button) findViewById(R.id.Guidebtn);
 
+        // directs the user to the questionnaire page
         travel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -29,6 +30,7 @@ public class GuidedActivity extends AppCompatActivity {
             }
         });
 
+        // directs the user to the tourist offices map page
         guide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

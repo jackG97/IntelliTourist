@@ -1,17 +1,17 @@
 package com.example.intellitourist;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class BarsViewsActivity extends AppCompatActivity {
 
 
     private Button barsprice;
-    private Button barshours;
+    private Button barstype;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,11 +19,12 @@ public class BarsViewsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_bars_views);
 
 
-        barshours = (Button) findViewById(R.id.barshoursbtn);
+        barstype = (Button) findViewById(R.id.barshoursbtn);
         barsprice = (Button) findViewById(R.id.barspricebtn);
 
 
 
+        // bars/nightclubs price map view
         barsprice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -32,7 +33,8 @@ public class BarsViewsActivity extends AppCompatActivity {
             }
         });
 
-        barshours.setOnClickListener(new View.OnClickListener() {
+        // bars/nightclubs type map view
+        barstype.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(BarsViewsActivity.this, BarsTypeMapsActivity.class);

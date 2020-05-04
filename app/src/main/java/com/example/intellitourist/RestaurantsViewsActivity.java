@@ -28,6 +28,7 @@ public class RestaurantsViewsActivity extends RestuarantsMapActivity {
 
 
 
+        //directs user to restaurants type page
         ViewByType.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -36,6 +37,7 @@ public class RestaurantsViewsActivity extends RestuarantsMapActivity {
             }
         });
 
+        //directs user to restaurants price page
         ViewByPrice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -44,6 +46,7 @@ public class RestaurantsViewsActivity extends RestuarantsMapActivity {
             }
         });
 
+        //directs user to restaurants star rating page
         ViewByPopularity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

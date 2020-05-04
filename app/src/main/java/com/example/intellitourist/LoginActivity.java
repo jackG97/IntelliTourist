@@ -51,6 +51,9 @@ public class LoginActivity extends AppCompatActivity {
         Name = (EditText) findViewById(R.id.NameTF);
         Email = (EditText) findViewById(R.id.EmailTF);
         Password = (EditText) findViewById(R.id.PasswordTF);
+
+        // This method checks if the user still logged, if so they will be automatically signed back to the app with out having to enter in their login details.
+        // if they are not automatically logged in they must enter in their details.
         mAuthStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -65,6 +68,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         };
 
+        // button to direct user
         RegisterHere.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -73,12 +77,15 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        // login button checks for conditions before logging user in
         Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // gets text from text boxes and reads it
                 String email = Email.getText().toString();
                 String password = Password.getText().toString();
                 String name = Name.getText().toString();
+                // if any of the text boxes are empty it will not log the user in.
                 if (email.isEmpty() && password.isEmpty() && name.isEmpty()) {
                     Toast.makeText(LoginActivity.this, "Fields Empty!", Toast.LENGTH_SHORT).show();
                 }
@@ -91,7 +98,9 @@ public class LoginActivity extends AppCompatActivity {
                 } else if (password.isEmpty()) {
                     Password.setError("Enter Password!");
                     Password.requestFocus();
+                    // if the text boxes are not empty (have text) they will be will be logged in.
                 }  else if (!(email.isEmpty() && password.isEmpty() && name.isEmpty())) {
+                    //firebase method used to log the user in with email and password. It will recognise the account if the user has one
                     mfirebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(LoginActivity.this, new OnCompleteListener() {
                         @Override
                         public void onComplete(@NonNull Task task) {

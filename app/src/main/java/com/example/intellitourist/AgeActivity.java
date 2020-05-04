@@ -1,16 +1,16 @@
 package com.example.intellitourist;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class AgeActivity extends AppCompatActivity {
 
+    //variables
     private Button over;
     private Button under;
 
@@ -20,10 +20,12 @@ public class AgeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_age);
 
 
+        //searching for ID of buttons
         over = (Button) findViewById(R.id.over18Btn);
         under = (Button) findViewById(R.id.button14);
 
 
+        //On click methods for buttons
         over.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -39,12 +41,14 @@ public class AgeActivity extends AppCompatActivity {
         });
     }
 
+    //if user is over 18 will be directed to bars/nightclubs type page
     public void Over18(){
         Intent intent = new Intent(this, BarsViewsActivity.class);
         startActivity(intent);
         Toast.makeText(AgeActivity.this, "Make sure you bring your ID", Toast.LENGTH_LONG).show();
     }
 
+    //if user is under 18 wil be directed back to to questionnaire
     public void under18(){
         Intent intent = new Intent(this, QuestionnaireActivity.class);
         startActivity(intent);
