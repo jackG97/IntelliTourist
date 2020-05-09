@@ -25,7 +25,7 @@
         android:id="@+id/textView18"
         android:layout_width="306dp"
         android:layout_height="67dp"
-        android:text="Do you prefer to use tourist guide services or tour independently?"
+        android:text="Do you prefer to use tourist guide services or travel independently?"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
